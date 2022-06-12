@@ -1,0 +1,1 @@
+export const toConsole = (str) => console.log(str);
