@@ -1,7 +1,10 @@
 import readline from 'readline'
 
-import {user, startMessageInConsole, endMessageInConsole} from './process/user.js';
+import {lexer} from './lexer/index.js';
+import {parser} from './parser/index.js';
+import {startMessageInConsole, endMessageInConsole} from './process/user.js';
 import {toConsole} from './console/toConsole.js';
+
 
 
 toConsole(startMessageInConsole);
@@ -12,7 +15,21 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', (input) => {
-	toConsole(`Received: ${input}`);
+	if (input === '.exit')
+	{
+		toConsole(endMessageInConsole);
+		rl.close();
+	} 
+	else {
+		try {
+			const {command, args} = lexer(input);
+			parser({command, args});
+		} catch (error) {
+			console.error(error.message);
+		}
+
+	}
+
   });
 
 rl.on('SIGINT', () => {
