@@ -5,9 +5,6 @@ const argsChecker = (args) => {
 }
 
 export const parser = ({command, args}) => {
-
-	// console.log(`command: ${command}, args: ${args}`);
-
 	switch (command) {
 		case 'up':
 			console.log('up');
