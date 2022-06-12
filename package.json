@@ -1,0 +1,24 @@
+{
+  "name": "node-file-manager",
+  "version": "1.0.0",
+  "description": "nodejs CLI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mamboojamboo/node-file-manager.git"
+  },
+  "keywords": [
+    "CLI",
+    "nodejs"
+  ],
+  "author": "mamboojamboo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mamboojamboo/node-file-manager/issues"
+  },
+  "homepage": "https://github.com/mamboojamboo/node-file-manager#readme"
+}
